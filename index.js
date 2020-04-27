@@ -15,7 +15,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
     }
 })
 
-app.get('/', (req, res) => res.send('hello World!'))
+app.get('/f', (req, res) => res.send('hello World!'))
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
