@@ -1,0 +1,14 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      $(function () {
+        const socket = io('http://localhost:4444/');
+        socket.on('rfid', (data) => {
+          console.log(data);
+          $("#rfids").append("<li>" + data.rfid + " " + data.milli + "</li>")
+        });
+      })
+    </script>
+    <ul id="rfids"></ul>
+    </html>
