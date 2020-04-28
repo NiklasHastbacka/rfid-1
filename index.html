@@ -3,7 +3,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
       $(function () {
-        const socket = io('http://localhost:4444/');
+        const socket = io('http://142.93.107.66:4444/');
         socket.on('rfid', (data) => {
           console.log(data);
           $("#rfids").append("<li>" + data.rfid + " " + data.milli + "</li>")
